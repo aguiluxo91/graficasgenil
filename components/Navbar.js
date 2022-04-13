@@ -7,7 +7,7 @@ export default function Navbar() {
 
     const links = [
         { name: "¿Quiénes somos?", id: "quienes-somos" },
-        { name: "¿Qué hacemos?", id: "que-hacemos" },
+        { name: "Pedir presupuesto", id: "presupuesto" },
         { name: "Contacto", id: "contacto" },
     ]
 
@@ -17,7 +17,7 @@ export default function Navbar() {
 
     return (
 
-        <nav className="shadow-md w-full top-0 left-0" id='navbar'>
+        <nav className="shadow-md w-full top-0 left-0 z-[99]" id='navbar'>
             <div className='md:flex bg-white py-4 md:px-10 px-7 items-center justify-between'>
                 <div className='w-64 cursor-pointer flex items-center'>
                     <Link href="/">
@@ -32,7 +32,7 @@ export default function Navbar() {
                 <ul className={`md:flex md:items-center absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${isOpen ? "top-20 opacity-100" : "top-[-490px]"} md:opacity-100`}>
                     {links.map((link, index) => (
                         <li key={index} className='md:ml-8 text-xl md:my-0 my-7'>
-                            <AnchorLink href={`#${link.id}`} className='text-cyan-500 hover:text-cyan-200 duration-500'>{link.name}</AnchorLink>
+                            <AnchorLink onClick={toggle} href={`#${link.id}`} className='text-cyan-500 hover:text-cyan-200 duration-500'>{link.name}</AnchorLink>
                         </li>
                     ))}
                 </ul>

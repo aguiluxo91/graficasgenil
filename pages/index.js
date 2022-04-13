@@ -1,5 +1,16 @@
+import { useEffect } from 'react';
+import Card from "../components/Card";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    })
+  }, [])
+
   return (
     <>
       <header className="w-full sm:h-screen">
@@ -14,33 +25,37 @@ export default function Home() {
         </section>
       </header>
 
-      <section id="quienes-somos" className="mx-auto container mt-8">
-        <h3 className="w-full m-4 text-2xl text-white text-center underline font-bold font-[Georgia]">¿Quiénes somos?</h3>
-        <div className="sm:flex justify-between items-center">
-          <div className="w-full lg:w-1/3 h-96 rounded p-2 h-auto text-justify mx-auto text-sm md:text-lg font-[Georgia] bg-white/25 p-6 shadow-lg">
-            <p>En Gráficas Genil, s.l. realizamos impresión de todo tipo de material gráfico con posibilidad de impresión en diferentes tamaños. Disponemos de la maquinara de imprenta offset y digital más avanzada del mercado. Estamos especializados en la pequeña y mediana empresa y como tal prestamos servicio de asesoramiento constante. Una buena impresión profesional con más de 25 años de experiencia.</p>
-          </div>
-          <img src="/PAGINA WEB ROLAND.png" alt="logo" className="w-1/2 h-full mx-auto mt-2" />
-        </div>
-      </section>
+      <Card id="quienes-somos" aosStyle="fade-left" aosDuration="3000" title="¿Quiénes somos?" text="En Gráficas Genil, s.l. realizamos impresión de todo tipo de material gráfico con posibilidad de impresión en diferentes tamaños. Disponemos de la maquinara de imprenta offset y digital más avanzada del mercado. Estamos especializados en la pequeña y mediana empresa y como tal prestamos servicio de asesoramiento constante. Una buena impresión profesional con más de 25 años de experiencia." image="/PAGINA WEB CUENTA HILOS.png" left />
 
       <hr className="w-1/3 mx-auto mt-12" />
 
-      <section id="diseño" className=" mx-auto container mt-12">
-        <h3 className="w-full m-4 text-2xl text-white text-center underline font-bold font-[Georgia]">Diseño Gráfico</h3>
-        <div className="sm:flex justify-between items-center">
-          <img src="/PAGINA WEB DISEÑO.png" alt="diseño" className="w-1/3 h-full rounded shadow-lg mx-auto mb-2" />
-          <div className="w-full lg:w-1/3 h-96 rounded p-2 h-auto text-justify mx-auto text-sm md:text-lg font-[Georgia] bg-white/25 p-6 shadow-lg">
-            <p>Tenemos la posibilidad de diseñar tus necesidades desde nuestro departamento de Diseño gráfico, para realizar todos sus diseños fácilmente. También puede enviar su diseño directamente. Revisamos todos los archivos antes de poner en marcha su impresión para garantizar la mayor calidad y un acabado optimo.</p>
-          </div>
-        </div>
-      </section>
+      <Card aosStyle="fade-right" aosDuration="3000" title="Diseño Gráfico" text="Tenemos la posibilidad de diseñar tus necesidades desde nuestro departamento de Diseño gráfico, para realizar todos sus diseños fácilmente. También puede enviar su diseño directamente. Revisamos todos los archivos antes de poner en marcha su impresión para garantizar la mayor calidad y un acabado optimo." image="/PAGINA WEB DISEÑO.png" right />
 
       <hr className="w-1/3 mx-auto mt-12" />
 
-      <section id="que-hacemos" className="flex justify-end mt-12">
-        <img src="/PAGINA WEB KONICA.png" alt="logo" className="w-1/2" />
-      </section>
+      <Card aosStyle="slide-up" aosDuration="3000" title="Flyers y Folletos publicitarios" text="Uno de los productos más solicitados son los flyers, trípticos y folletos totalmente personalizados tanto en diseño como en tamaño y calidades en el papel." image="/flyer.png" left />
+
+      <hr className="w-1/3 mx-auto mt-12" />
+
+      <Card aosStyle="fade-left" aosDuration="3000" title="Impresión Gran Formato" text="Imprimimos en gran formato tanto en bobina como en impresión directa esto no da la posibilidad de ofrecer las mejores calidades. Las tintas empleadas en su estampación tienen una garantía al exterior de 3 a 5 años." image="/PAGINA WEB ROLAND.png" right />
+
+
+
+      <div className="mapouter" data-aos="zoom-in-up" data-aos-duration="3000">
+        <div className="gmap_canvas">
+          <iframe className='w-2/3 h-80 mx-auto rounded-lg shadow-lg' id="gmap_canvas" src="https://maps.google.com/maps?q=Graficas%20Genil&t=&z=15&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+          <a href="https://123movies-to.org"></a>
+        </div>
+      </div>
+
+    <section className="w-full flex justify-between mt-12">
+      <div className='mr-3 flex flex-end' data-aos="slide-right" data-aos-duration="3000">
+        <img src="/PAGINA WEB laser.png" alt="corte-laser"/>
+      </div>
+      <div className='mr-3' data-aos="slide-left" data-aos-duration="3000" >
+        <img src="/PAGINA WEB KONICA.png" alt="impresora" />
+      </div>
+    </section>
     </>
   )
 }
