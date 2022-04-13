@@ -33,7 +33,7 @@ export default function Layout({ children }) {
                 <link rel="icon" href="/logopequeño.png" />
             </Head>
             <Navbar />
-            <div className="bg-cyan-500 w-full mt-20">
+            <div className="bg-cyan-500 w-full">
                 <main>{children}</main>
             </div>
             <Footer />
