@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Card from "../components/Card";
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import Budget from '../components/Budget';
 
 export default function Home() {
 
@@ -48,14 +49,17 @@ export default function Home() {
         </div>
       </div>
 
-    <section className="w-full flex justify-between mt-12">
-      <div className='mr-3 flex flex-end' data-aos="slide-right" data-aos-duration="3000">
-        <img src="/PAGINA WEB laser.png" alt="corte-laser"/>
-      </div>
-      <div className='mr-3' data-aos="slide-left" data-aos-duration="3000" >
-        <img src="/PAGINA WEB KONICA.png" alt="impresora" />
-      </div>
-    </section>
+      <Budget />
+
+      <section className="w-full flex justify-between mt-12">
+        <div className='mr-3 flex flex-end' data-aos="slide-right" data-aos-duration="3000">
+          <img src="/PAGINA WEB laser.png" alt="corte-laser" />
+        </div>
+        <div className='mr-3' data-aos="slide-left" data-aos-duration="3000" >
+          <img src="/PAGINA WEB KONICA.png" alt="impresora" />
+        </div>
+      </section>
+
     </>
   )
 }
