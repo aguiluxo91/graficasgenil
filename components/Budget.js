@@ -139,7 +139,7 @@ export default function Budget() {
 
 
     return (
-        <form onSubmit={handleSubmit} className="flex w-full space-x-3 mx-auto" id="presupuesto" data-aos="zoom-in">
+        <form onSubmit={handleSubmit} className="flex w-2/3 sm:w-full space-x-3 mx-auto" id="presupuesto" data-aos="zoom-in">
             <div className="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-white rounded-lg shadow dark:bg-gray-800">
                 <div className="mb-6 text-3xl font-light text-center text-gray-800 dark:text-white">
                     Pide Presupuesto

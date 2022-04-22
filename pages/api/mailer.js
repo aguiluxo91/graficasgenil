@@ -7,7 +7,7 @@ export default function (req, res) {
     
     const transport = nodemailer.createTransport({
         port: 465,
-        host: "smtp.gmail.com",
+        host: "smtp.strato.com",
         auth: {
           user,
           pass,
