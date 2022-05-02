@@ -26,7 +26,7 @@ export default function Home() {
         </section>
       </header>
 
-      <Card id="quienes-somos" aosStyle="fade-left" aosDuration="3000" title="¿Quiénes somos?" text="En Gráficas Genil, s.l. realizamos impresión de todo tipo de material gráfico con posibilidad de impresión en diferentes tamaños. Disponemos de la maquinara de imprenta offset y digital más avanzada del mercado. Estamos especializados en la pequeña y mediana empresa y como tal prestamos servicio de asesoramiento constante. Una buena impresión profesional con más de 25 años de experiencia." image="/PAGINA WEB CUENTA HILOS.png" left />
+      <Card id="quienes-somos" aosStyle="fade-left" aosDuration="3000" title="¿Quiénes somos?" text="En Gráficas Genil, s.l. realizamos impresión de todo tipo de material gráfico con posibilidad de impresión en diferentes tamaños. Disponemos de la maquinaria de imprenta offset y digital más avanzada del mercado. Estamos especializados en la pequeña y mediana empresa y como tal prestamos servicio de asesoramiento constante. Una buena impresión profesional con más de 25 años de experiencia." image="/PAGINA WEB CUENTA HILOS.png" left />
 
       <section className="w-full mt-12">
         <div data-aos="fade" data-aos-duration="3000" >
@@ -44,7 +44,7 @@ export default function Home() {
 
       <hr className="w-1/3 mx-auto mt-12" />
 
-      <Card aosStyle="fade-left" aosDuration="3000" title="Impresión Gran Formato" text="Imprimimos en gran formato tanto en bobina como en impresión directa esto no da la posibilidad de ofrecer las mejores calidades. Las tintas empleadas en su estampación tienen una garantía al exterior de 3 a 5 años." image="/PAGINA WEB ROLAND.png" right />
+      <Card aosStyle="fade-left" aosDuration="3000" title="Impresión Gran Formato" text="Imprimimos en gran formato tanto en bobina como en impresión directa esto nos da la posibilidad de ofrecer las mejores calidades. Las tintas empleadas en su estampación tienen una garantía al exterior de 3 a 5 años." image="/PAGINA WEB ROLAND.png" right />
 
       <hr className="w-1/3 mx-auto mt-12" />
 
