@@ -14,7 +14,7 @@ export default function (req, res) {
     const pass = process.env.EMAIL_PASSWORD;
     
     const transport = nodemailer.createTransport({
-        port: 587,
+        port: 465,
         host: "smtp.strato.com",
         type: "login",
         auth: {
@@ -30,7 +30,7 @@ export default function (req, res) {
         html: `<h1>Hola Antonio</h1> <p>${req.body.name} Te ha enviado una petición de presupuesto</p> <p>${req.body.text}</p> <p>${req.body.email}</p> <p>${req.body.tlf}</P>`
     }
         
-    
+
     transport.sendMail(mailData);
 
     return res.status(200).end();
