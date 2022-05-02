@@ -8,11 +8,11 @@ export default function (req, res) {
     const transport = nodemailer.createTransport({
         port: 587,
         host: "smtp.strato.com",
+        type: "login",
         auth: {
           user,
           pass,
-        },
-        secure: true,
+        }
     })
 
     const mailData = {
