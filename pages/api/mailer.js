@@ -6,7 +6,7 @@ export default function (req, res) {
     const pass = process.env.EMAIL_PASSWORD;
     
     const transport = nodemailer.createTransport({
-        port: 465,
+        port: 587,
         host: "smtp.strato.com",
         auth: {
           user,
