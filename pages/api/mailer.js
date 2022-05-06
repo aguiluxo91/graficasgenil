@@ -1,12 +1,4 @@
 require('dotenv').config();
-const express = require('express');
-const router = express.Router();
-const cors = require('cors');
-const app = express()
-app.use(cors())
-app.use(express.json())
-app.use('/', router)
-app.listen(3002)
 
 export default function (req, res) {
     const nodemailer = require('nodemailer');
@@ -43,5 +35,4 @@ export default function (req, res) {
         transport.close();
     })
 
-    /* return res.status(200).end(); */
 }
