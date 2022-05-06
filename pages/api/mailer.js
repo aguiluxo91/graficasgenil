@@ -31,7 +31,17 @@ export default function (req, res) {
     }
         
 
-    transport.sendMail(mailData);
+    transport.sendMail(mailData, (error, response) => {
+        if (error) {
+            console.log(error)
+            res.end("error")
+        } else {
+            console.log("Message sent")
+            res.end("sent")
+        }
 
-    return res.status(200).end();
+        transport.close();
+    })
+
+    /* return res.status(200).end(); */
 }
